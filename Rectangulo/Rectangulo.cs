@@ -8,25 +8,28 @@ namespace Rectangulo
 {
     public class Rectangulo: INotifyPropertyChanged
     {
-        private double baseR;
-        private double altura;
-        private double area;
-        private double perimetro;
+        private string baseR;
+        private string altura;
+        private string area;
+        private string perimetro;
+        private string distancia;
 
         public Rectangulo()
         {
-            this.baseR = 4;
-            this.altura = 2;
+            this.baseR = "4";
+            this.altura = "2";
         }
 
-        public double BaseR {
+
+
+        public string BaseR {
             get { return baseR; }
             set
             {
                 OnPropertyChanged("BaseR");
             }
         }
-        public double Altura
+        public string Altura
         {
             get => altura;
             set
@@ -36,6 +39,43 @@ namespace Rectangulo
             }
         }
 
+        public string Area
+        {
+            get
+            {
+                int area = int.Parse(BaseR) * int.Parse(Altura);
+                return area.ToString();
+            }
+            set
+            {
+                int area = int.Parse(BaseR) * int.Parse(Altura);
+                Console.WriteLine("El area es", area);
+            }
+        }
+
+        public string Perimetro
+        {
+            get
+            {
+                int perimetro = (2 * int.Parse(BaseR)) + (2 * int.Parse(Altura));
+                return perimetro.ToString();
+            }
+            set
+            {
+                int perimetro = (2*int.Parse(BaseR)) + (2*int.Parse(Altura));
+                Console.WriteLine("El perimetro es", perimetro);
+            }
+        }
+        
+        //public string Distancia
+        //{
+        //    get
+        //    {
+        //        int distancia=Math.Sqrt()
+        //    }
+        //}
+
+
         public event PropertyChangedEventHandler PropertyChanged;
         private void OnPropertyChanged(string property)
         {
@@ -44,15 +84,16 @@ namespace Rectangulo
         }
 
 
-        public void areaR()
-        {
-            area = BaseR * Altura;
-            Console.WriteLine("El area es", area);
-        }
-        public void perimetroR()
-        {
-            perimetro = ((2 * BaseR) + (2 * Altura));
-        }
+        //public void areaR()
+        //{
+        //    area = BaseR * Altura;
+        //    Console.WriteLine("El area es", area);
+        //}
+        //public void perimetroR()
+        //{
+        //    perimetro = ((2 * BaseR) + (2 * Altura));
+        //    Console.WriteLine("El perimetro es", perimetro);
+        //}
 
 
     }
