@@ -6,94 +6,123 @@ using System.Threading.Tasks;
 using System.ComponentModel;
 namespace Rectangulo
 {
-    public class Rectangulo: INotifyPropertyChanged
+    public class Rectangulo : INotifyPropertyChanged
     {
-        private string baseR;
-        private string altura;
-        private string area;
-        private string perimetro;
-        private string distancia;
-
-        public Rectangulo()
-        {
-            this.baseR = "4";
-            this.altura = "2";
-        }
-
-
-
-        public string BaseR {
-            get { return baseR; }
-            set
-            {
-                OnPropertyChanged("BaseR");
-            }
-        }
-        public string Altura
-        {
-            get => altura;
-            set
-            {
-
-                OnPropertyChanged("Altura");
-            }
-        }
-
-        public string Area
-        {
-            get
-            {
-                int area = int.Parse(BaseR) * int.Parse(Altura);
-                return area.ToString();
-            }
-            set
-            {
-                int area = int.Parse(BaseR) * int.Parse(Altura);
-                Console.WriteLine("El area es", area);
-            }
-        }
-
-        public string Perimetro
-        {
-            get
-            {
-                int perimetro = (2 * int.Parse(BaseR)) + (2 * int.Parse(Altura));
-                return perimetro.ToString();
-            }
-            set
-            {
-                int perimetro = (2*int.Parse(BaseR)) + (2*int.Parse(Altura));
-                Console.WriteLine("El perimetro es", perimetro);
-            }
-        }
-        
-        //public string Distancia
-        //{
-        //    get
-        //    {
-        //        int distancia=Math.Sqrt()
-        //    }
-        //}
-
-
         public event PropertyChangedEventHandler PropertyChanged;
-        private void OnPropertyChanged(string property)
+        private void OnPropertyChanged(String property)
         {
             if (PropertyChanged != null)
                 PropertyChanged(this, new PropertyChangedEventArgs(property));
         }
 
+        private string aX1;
+        private string bX1;
+        private string aX2;
+        private string bX2;
+        private string aY1;
+        private string bY1;
+        private string aY2;
+        private string bY2;
 
-        //public void areaR()
-        //{
-        //    area = BaseR * Altura;
-        //    Console.WriteLine("El area es", area);
-        //}
-        //public void perimetroR()
-        //{
-        //    perimetro = ((2 * BaseR) + (2 * Altura));
-        //    Console.WriteLine("El perimetro es", perimetro);
-        //}
+        //Puntos X1
+
+        public string AX1
+        {
+            get => aX1;
+            set
+            {
+                double numero;
+                bool resultado = double.TryParse(value, out numero);
+                if (resultado) aX1 = value;
+                OnPropertyChanged("AX1");
+            }
+        }
+        public string BX1
+        {
+            get => bX1;
+            set
+            {
+                double numero;
+                bool resultado = double.TryParse(value, out numero);
+                if (resultado) bX1 = value;
+                OnPropertyChanged("BX1");
+            }
+        }
+
+        //Punto XX2
+        public string AX2
+        {
+            get => aX2;
+            set
+            {
+                double numero;
+                bool resultado = double.TryParse(value, out numero);
+                if (resultado) aX2 = value;
+                OnPropertyChanged("AX2");
+            }
+        }
+
+        public string BX2
+        {
+            get => bX2;
+            set
+            {
+                double numero;
+                bool resultado = double.TryParse(value, out numero);
+                if (resultado) bX2 = value;
+                OnPropertyChanged("BX2");
+            }
+        }
+        
+        //Punto Y1
+        public string AY1
+        {
+            get => aY1;
+            set
+            {
+                double numero;
+                bool resultado = double.TryParse(value, out numero);
+                if (resultado) aY1 = value;
+                OnPropertyChanged("AY1");
+            }
+        }
+
+        public string BY1
+        {
+            get => bY1;
+            set
+            {
+                double numero;
+                bool resultado = double.TryParse(value, out numero);
+                if (resultado) bY1 = value;
+                OnPropertyChanged("BY1");
+            }
+        }
+
+        //Punto Y2
+        public string AY2
+        {
+            get => aY2;
+            set
+            {
+                double numero;
+                bool resultado = double.TryParse(value, out numero);
+                if (resultado) aY2 = value;
+                OnPropertyChanged("AY2");
+            }
+        }
+
+        public string BY2
+        {
+            get => BY2;
+            set
+            {
+                double numero;
+                bool resultado = double.TryParse(value, out numero);
+                if (resultado) bY2 = value;
+                OnPropertyChanged("BY2");
+            }
+        }
 
 
     }
