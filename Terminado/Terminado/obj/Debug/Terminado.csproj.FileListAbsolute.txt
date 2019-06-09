@@ -1,0 +1,15 @@
+C:\Users\Danny\source\repos\Terminado\Terminado\bin\Debug\Terminado.exe.config
+C:\Users\Danny\source\repos\Terminado\Terminado\bin\Debug\Terminado.exe
+C:\Users\Danny\source\repos\Terminado\Terminado\bin\Debug\Terminado.pdb
+C:\Users\Danny\source\repos\Terminado\Terminado\obj\Debug\Terminado.csprojAssemblyReference.cache
+C:\Users\Danny\source\repos\Terminado\Terminado\obj\Debug\MainWindow.g.cs
+C:\Users\Danny\source\repos\Terminado\Terminado\obj\Debug\App.g.cs
+C:\Users\Danny\source\repos\Terminado\Terminado\obj\Debug\Terminado_MarkupCompile.cache
+C:\Users\Danny\source\repos\Terminado\Terminado\obj\Debug\Terminado_MarkupCompile.lref
+C:\Users\Danny\source\repos\Terminado\Terminado\obj\Debug\MainWindow.baml
+C:\Users\Danny\source\repos\Terminado\Terminado\obj\Debug\Terminado.g.resources
+C:\Users\Danny\source\repos\Terminado\Terminado\obj\Debug\Terminado.Properties.Resources.resources
+C:\Users\Danny\source\repos\Terminado\Terminado\obj\Debug\Terminado.csproj.GenerateResource.cache
+C:\Users\Danny\source\repos\Terminado\Terminado\obj\Debug\Terminado.csproj.CoreCompileInputs.cache
+C:\Users\Danny\source\repos\Terminado\Terminado\obj\Debug\Terminado.exe
+C:\Users\Danny\source\repos\Terminado\Terminado\obj\Debug\Terminado.pdb
