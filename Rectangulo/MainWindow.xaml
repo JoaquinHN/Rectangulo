@@ -6,7 +6,34 @@
         xmlns:local="clr-namespace:Rectangulo"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <!--asas-->
-    </Grid>
+    <StackPanel Background="Bisque" Margin="0,0,-0.4,-201">
+        <Label Content="Calculo de area y Perimetro de un rectangulo" HorizontalAlignment="Center" FontSize="30"/>
+        <Grid Height="500" Width="500" HorizontalAlignment="Center" Background="Azure">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <!--Etiquetas -->
+            <Label Content="X1" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" FontSize="30"/>
+            <Label Content="X2" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" FontSize="30"/>
+            <Label Content="Y1" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Center" FontSize="30"/>
+            <Label Content="Y2" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Center" FontSize="30"/>
+            <Label Content="Perimetro" Grid.Column="0" Grid.Row="5" HorizontalAlignment="Center" FontSize="30"/>
+            <Label Content="Area" Grid.Column="0" Grid.Row="6" HorizontalAlignment="Center" FontSize="30"/>
+            <Label Content="Datos" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" FontSize="30"/>
+            <!--Aca se ingresan los datos-->
+        </Grid>
+        
+
+    </StackPanel>
 </Window>
