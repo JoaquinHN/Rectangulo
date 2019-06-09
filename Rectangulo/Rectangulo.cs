@@ -135,11 +135,11 @@ namespace Rectangulo
             return distancia;
         }
         //Verificar Altura
-        public Double AlturaR()
+        public Double VAlturaR()
         {
             double AlturaR1, AlturaR2;
-            AlturaR1 = Distancia(double.Parse(aX1), double.Parse(aX2), double.Parse(aY1), double.Parse(bY2));
-            AlturaR2 = Distancia(double.Parse(bX1), double.Parse(bX2), double.Parse(bY1), double.Parse(aY2));
+            AlturaR1 = Distancia(double.Parse(aX1), double.Parse(bX2), double.Parse(aY1), double.Parse(bY2));
+            AlturaR2 = Distancia(double.Parse(bX1), double.Parse(aX2), double.Parse(bY1), double.Parse(aY2));
             if (AlturaR1 != AlturaR2)
             {
                 AlturaR1 = 0;
@@ -148,7 +148,7 @@ namespace Rectangulo
             return AlturaR1;
         }
         //Verificar Base
-        public Double BaseR()
+        public Double VBaseR()
         {
             double BaseR1, BaseR2;
             BaseR1 = Distancia(double.Parse(aX1), double.Parse(bX1), double.Parse(aY1), double.Parse(bY2));
@@ -157,8 +157,72 @@ namespace Rectangulo
                 BaseR1 = 0;
             return BaseR1;
         }
+        //Obtenet Altura 
+        public string ARectangulo
+        {
+            get
+            {
+                double AlturaRe = VAlturaR();
+                return AlturaRe.ToString();
+            }
+            set
+            {
+                double AlturaRe = VAlturaR();
+                AlturaRe.ToString();
+                OnPropertyChanged("ARectangulo");
+            }
+        }
+        //Obtener Base
+        public string BRectangulo
+        {
+            get
+            {
+                double BaseRe = VBaseR();
+                return BaseRe.ToString();
+            }
+            set
+            {
+                double BaseRe = VBaseR();
+                BaseRe.ToString();
+                OnPropertyChanged("BRectangulo");
+            }
+        }
+        //Obtener Perimetro
+        public string Perimetro
+        {
+            get
+            {
+                double perimetro;
+                perimetro = 2 * double.Parse(BRectangulo) + 2 * double.Parse(ARectangulo);
+                return perimetro.ToString();
+            }
+            set
+            {
+                double perimetro;
+                perimetro = 2 * double.Parse(BRectangulo) + 2 * double.Parse(ARectangulo);
+                perimetro.ToString();
+                OnPropertyChanged("Perimetro");
+            }
+        }
 
+        //Obtener Area
+        public string Area
+        {
+            get
+            {
+                double areaRe;
+                areaRe = double.Parse(BRectangulo) * double.Parse(ARectangulo);
+                return areaRe.ToString();
+            }
+            set
+            {
+                double areaRe;
+                areaRe = double.Parse(BRectangulo) * double.Parse(ARectangulo);
+                areaRe.ToString();
+                OnPropertyChanged("Area");
+            }
+        }
 
-
+       
     }
 }
