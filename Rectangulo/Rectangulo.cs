@@ -125,5 +125,40 @@ namespace Rectangulo
         }
 
 
+
+        //METODOS 
+        //Formula de distancia
+        public double Distancia(double x1, double x2, double y1, double y2)
+        {
+            double distancia;
+            distancia = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2));
+            return distancia;
+        }
+        //Verificar Altura
+        public Double AlturaR()
+        {
+            double AlturaR1, AlturaR2;
+            AlturaR1 = Distancia(double.Parse(aX1), double.Parse(aX2), double.Parse(aY1), double.Parse(bY2));
+            AlturaR2 = Distancia(double.Parse(bX1), double.Parse(bX2), double.Parse(bY1), double.Parse(aY2));
+            if (AlturaR1 != AlturaR2)
+            {
+                AlturaR1 = 0;
+
+            }
+            return AlturaR1;
+        }
+        //Verificar Base
+        public Double BaseR()
+        {
+            double BaseR1, BaseR2;
+            BaseR1 = Distancia(double.Parse(aX1), double.Parse(bX1), double.Parse(aY1), double.Parse(bY2));
+            BaseR2 = Distancia(double.Parse(aX2), double.Parse(bX2), double.Parse(aY2), double.Parse(bY2));
+            if (BaseR1 != BaseR2)
+                BaseR1 = 0;
+            return BaseR1;
+        }
+
+
+
     }
 }
